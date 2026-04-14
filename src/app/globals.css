@@ -1,0 +1,48 @@
+@import 'tailwindcss';
+
+:root {
+  --inv-bg: #fffdf7;
+  --inv-bg-alt: #fef9ee;
+  --inv-text-primary: #1a1a1a;
+  --inv-text-secondary: #6b5c3e;
+  --inv-accent: #b8860b;
+  --inv-accent-glow: rgba(184,134,11,0.15);
+  --inv-card-bg: #ffffff;
+  --inv-card-border: #e8dcc8;
+  --inv-gradient-from: #b8860b;
+  --inv-gradient-to: #d4a853;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--inv-bg);
+  color: var(--inv-text-primary);
+  font-family: 'Nanum Myeongjo', 'Pretendard Variable', serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 카운트다운 숫자 폰트 */
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+/* 부드러운 섹션 구분선 */
+section + section { border-top: 1px solid var(--inv-card-border); }
+
+/* 모바일 최적화 */
+@media (max-width: 640px) {
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.25rem !important; }
+}
+
+/* 접근성: 모션 감소 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
